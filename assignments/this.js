@@ -1,8 +1,8 @@
 /* The for principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
-* 1. 
-* 2. 
+* 1. The first principle is window console object that will output everything that is used in javascript.
+* 2. JavaScript uses the, "this" keyword that refers to a 
 * 3. 
 * 4. 
 *
