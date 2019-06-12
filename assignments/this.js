@@ -57,3 +57,12 @@ const employee = {
 const new_employee = newHire.employee_1.apply(employee);
 console.log(new_employee);
 
+// call function
+const gamerName = {
+    firstName: 'Blade',
+    lastName: 'Runner',
+    username: function() {
+     return `Welcome to Call Of Duty ${this.firstName} ${this.lastName}`
+    }
+}
+console.log(gamerName.username());
