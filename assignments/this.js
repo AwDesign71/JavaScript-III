@@ -22,17 +22,38 @@ username('Zyoung');
 // code example for Implicit Binding
 
 const passwords = {
-    pass_word: 'New password',
+    password: 'New password',
     enter_password: function(pass) {
-        console.log(`Please enter a  ${this.pass_Word}, ${this.pass}`);
+        console.log(`Please enter a ${this.password}, password now set to ${pass}`);
         console.log(this);
     }
-}
-passwords.enter_password('W@d933!ddE');
+};
+passwords.enter_password('Password');
 // Principle 3
 
 // code example for New Binding
-
+function SignUp(newSignUp){
+    this.fullName = 'Jimmy Walker',
+    this.newSignUp = newSignUp,
+    this.welcome = function() {
+        console.log(`Welcome ${this.fullName} your new id is ${this.newSignUp}.`);
+    }
+}
+const Employee_1 = new SignUp(`ID: 3432E4554`);
+Employee_1.welcome();
 // Principle 4
 
 // code example for Explicit Binding
+const newHire = {
+    employee_1: function() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+
+const employee = {
+    firstName: 'Lisa',
+    lastName: 'Johnson'
+}
+const new_employee = newHire.employee_1.apply(employee);
+console.log(new_employee);
+
